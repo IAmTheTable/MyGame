@@ -22,8 +22,11 @@ public class GravityManager : MonoBehaviour
     {
         float dist = Vector3.Distance(gameObject.transform.position, planet.transform.position);
 
-        Vector3 v = planet.transform.position - transform.position;
+        if (dist <= gravityDistance)
+        {
+            Vector3 v = planet.transform.position - transform.position;
 
-        rb.AddForce(v.normalized * (1.0f - dist / gravityDistance) * gravityForce);
+            rb.AddForce(v.normalized * (1.0f - dist / gravityDistance) * gravityForce);
+        }
     }
 }
