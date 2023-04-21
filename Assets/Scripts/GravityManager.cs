@@ -14,7 +14,7 @@ public class GravityManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        planet = GameObject.Find("GravityCircle");
     }
 
     // Update is called once per frame
