@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Map
   - Food
+  - Bullet
+  - Middle
+  - lb
   layers:
   - Default
   - TransparentFX
